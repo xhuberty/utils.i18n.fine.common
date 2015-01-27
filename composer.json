@@ -1,0 +1,38 @@
+{
+    "name": "mouf/utils.i18n.fine.common",
+    "description": "This package contains the class to cascade the translation, default instance and the interface for fine ui.",
+    "keywords": ["mouf", "i18n", "translation", "common"],
+    "homepage": "https://mouf-php.com/mouf/utils.i18n.fine.common",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc TEYSSIER",
+            "email": "m.teyssier@thecodingmachine.com",
+            "homepage": "http://mouf-php.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.4.0",
+    	"mouf/mouf-installer": "~2.0",
+    	"mouf/utils.i18n.fine.translation-interface": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mouf\\Utils\\I18n\\Fine\\Common\\": "src/"
+        },
+        "files": ["src/msgFunctions.php"]
+    },
+    "extra": {
+        "mouf": {
+            "logo": "logo.png",
+	        "install": [
+	                {
+		                "type": "class",
+		                "class": "Mouf\\Utils\\I18n\\Fine\\Common\\FineInstaller",
+		                "description": "This installer will create a default translator for cascading many translator type"
+	                }
+		    ]
+        }
+    }
+}
