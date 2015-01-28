@@ -17,13 +17,13 @@
     	"mouf/mouf-installer": "~2.0",
     	"mouf/utils.i18n.fine.translation-interface": "~4.0"
     },
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Mouf\\Utils\\I18n\\Fine\\Common\\": "src/"
         },
         "files": ["src/msgFunctions.php"]
     },
+    "minimum-stability": "dev",
     "extra": {
         "mouf": {
             "logo": "logo.png",
