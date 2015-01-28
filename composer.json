@@ -17,6 +17,7 @@
     	"mouf/mouf-installer": "~2.0",
     	"mouf/utils.i18n.fine.translation-interface": "~4.0-dev"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Mouf\\Utils\\I18n\\Fine\\Common\\": "src/"
