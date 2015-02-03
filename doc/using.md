@@ -11,9 +11,12 @@ Example:
 $string = iMsg('mykey', array('parameter1' => 'value'));
 eMsg('mykey', array('parameter1' => 'value'));
 ```
+The messagethe key mykey is: "A test with {parameter1}"
 
-It's possible to add an instance of LanguageDetectionInterface (for exemple to change the language in the middle of your code.
-Exemple of using:
+It's possible to add an instance of LanguageDetectionInterface (for exemple to change the language in the middle of your code).
+Example:
 In this controller you have bind an instance of LanguageDetetionInterface named $fixEnglishLanguage
 So you can call the function with
+```
 iMsg('myKey', array('parameter1' => 'value'), $this->fixEnglishLanguage);
+```

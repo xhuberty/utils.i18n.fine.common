@@ -6,7 +6,8 @@
  */
 namespace Mouf\Utils\I18n\Fine\Common;
 
-use Mouf\Utils\I18n\Fine\LanguageTranslationInterface;
+use Mouf\Utils\I18n\Fine\TranslatorInterface;
+use Mouf\Utils\I18n\Fine\LanguageDetectionInterface;
 
 /**
  * This element can cascading the language translation to search the first with a translation
@@ -14,16 +15,20 @@ use Mouf\Utils\I18n\Fine\LanguageTranslationInterface;
  * @Component
  * @author Marc TEYSSIER
  */
-class FineCascadingTranslator implements LanguageTranslationInterface
+class FineCascadingTranslator implements TranslatorInterface
 {
     /**
      * List of all translator in order of priority
      *
-     * @var array<\Mouf\Utils\I18n\Fine\LanguageTranslationInterface>
+     * @var array<\Mouf\Utils\I18n\Fine\TranslatorInterface>
      */
     private $translators = array();
 
-    public function __construct($translators = array())
+    /**
+     * 
+     * @param array<\Mouf\Utils\I18n\Fine\TranslatorInterface> $translators
+     */
+    public function __construct(array $translators = array())
     {
         $this->translators = $translators;
     }
@@ -34,9 +39,10 @@ class FineCascadingTranslator implements LanguageTranslationInterface
      *
      * @param $message string This is the key of translation search
      * @param $parameters array All parameters to customize message
+     * @param LanguageDetectionInterface $languageDetection Set it if you want to force the language to another value
      * @return string|null
      */
-    public function getTranslation($message, array $parameters = array())
+    public function getTranslation($message, array $parameters = array(), LanguageDetectionInterface $languageDetection = null)
     {
         echo 'oui aaa';
         foreach ($this->translators as $translator) {

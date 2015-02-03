@@ -56,7 +56,7 @@ The installer create default instance and automatically bind the translator.
 
 ###Default class
 
-This package addes a fine cascading translator to bind many instance of LanguageTranslationInterface. The first translation found is returned, also the next translation is checked.
+This package addes a fine cascading translator to bind many instance of TranslatorInterface. The first translation found is returned, also the next translation is checked.
 Edit the instance in Mouf to add or change the order in cascading translator.
 
 ###Functions

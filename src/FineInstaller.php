@@ -1,5 +1,5 @@
 <?php
-namespace Mouf\Utils\I18n\Fine\Commmon;
+namespace Mouf\Utils\I18n\Fine\Common;
 
 use Mouf\Installer\PackageInstallerInterface;
 use Mouf\MoufManager;
@@ -26,7 +26,7 @@ class FineInstaller implements PackageInstallerInterface
             $defaultTranslationService->setName("defaultTranslationService");
         }
         */
-        $defaultTranslationService = InstallUtils::getOrCreateInstance("defaultTranslationService", "Mouf\\Utils\\I18n\\Common\\FineCascadingTranslator", $moufManager);
+        $defaultTranslationService = InstallUtils::getOrCreateInstance("defaultTranslationService", "Mouf\\Utils\\I18n\\Fine\\Common\\FineCascadingTranslator", $moufManager);
 
         // Let's rewrite the MoufComponents.php file to save the component
         $moufManager->rewriteMouf();
