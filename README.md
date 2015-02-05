@@ -1,6 +1,6 @@
-![Scrutinizer](https://scrutinizer-ci.com/g/thecodingmachine/utils.i18n.fine.common/badges/quality-score.png?b=4.0)
 What is this package
 ====================
+![Scrutinizer](https://scrutinizer-ci.com/g/thecodingmachine/utils.i18n.fine.common/badges/quality-score.png?b=4.0)
 
 This package contains all the functions, classes and installer to easily use fine in Muof.
 
