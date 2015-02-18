@@ -17,16 +17,7 @@ class FineInstaller implements PackageInstallerInterface
      */
     public static function install(MoufManager $moufManager)
     {
-        /*
-        //FineFileTranslatorService
-        if ($moufManager->instanceExists("defaultTranslationService")) {
-            $defaultTranslationService = $moufManager->getInstanceDescriptor("defaultTranslationService");
-        } else {
-            $defaultTranslationService = $moufManager->createInstance("Mouf\\Utils\\I18n\\Common\\FineCascadingTranslator");
-            $defaultTranslationService->setName("defaultTranslationService");
-        }
-        */
-        $defaultTranslationService = InstallUtils::getOrCreateInstance("defaultTranslationService", "Mouf\\Utils\\I18n\\Fine\\Common\\FineCascadingTranslator", $moufManager);
+        InstallUtils::getOrCreateInstance("defaultTranslationService", "Mouf\\Utils\\I18n\\Fine\\Common\\FineCascadingTranslator", $moufManager);
 
         // Let's rewrite the MoufComponents.php file to save the component
         $moufManager->rewriteMouf();

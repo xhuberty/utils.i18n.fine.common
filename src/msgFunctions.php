@@ -26,7 +26,7 @@ if (!function_exists("iMsg")) {
     {
         if (!$languageDetectionInterface) {
             static $translationService = null;
-            if ($translationService == null) {
+            if ($translationService === null) {
                 /* @var $translationService TranslationInterface */
                 $translationService = MoufManager::getMoufManager()->getInstance("defaultTranslationService");
             }

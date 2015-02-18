@@ -12,7 +12,6 @@ use Mouf\Utils\I18n\Fine\LanguageDetectionInterface;
 /**
  * This element can cascading the language translation to search the first with a translation
  *
- * @Component
  * @author Marc TEYSSIER
  */
 class FineCascadingTranslator implements TranslatorInterface
