@@ -39,7 +39,7 @@ trait EditTranslationHelperTrait
     {
         $messages = array();
         foreach ($this->getLanguageList() as $language) {
-            $messages[$language] = $this->getTranslationForLanguage($language);
+            $messages[$language] = $this->getTranslationsForLanguage($language);
         }
 
         return $messages;
