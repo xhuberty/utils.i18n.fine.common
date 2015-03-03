@@ -36,7 +36,7 @@ interface EditTranslationInterface
     /**
      * Return a list of all message for a language.
      *
-     * @param  string        $language Language
+     * @param  string        $key Fine key
      * @return array<string, string> List with key value of translation
      */
     public function getTranslationsForKey($key);
