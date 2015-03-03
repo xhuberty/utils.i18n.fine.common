@@ -47,6 +47,7 @@ A minimal *composer.json* file might look like this:
 As explained above, Fine is a package of the Mouf framework. Mouf allows you (amoung other things) to visualy "build" your project's dependencies and instances.
 
 To install the dependency, run
+
 	php composer.phar install
 
 This package contains
@@ -54,22 +55,23 @@ This package contains
 
 ###Installer
 
-The installer create default instance and automatically bind the translator.
+The installer creates a default instance and automatically binds the translator.
 
 ###Default class
 
-This package addes a fine cascading translator to bind many instance of TranslatorInterface. The first translation found is returned, also the next translation is checked.
+This package adds a fine cascading translator to bind many instances of `TranslatorInterface`. The first translation found is returned, also the next translation is checked.
 Edit the instance in Mouf to add or change the order in cascading translator.
 
 ###Functions
 
-There are 2 functions addes to simplify the language access.
-- iMsg function: Return the translation of the key, parameters (in option) and LanguageDetection (in option)
-- eMsg function: Do an echo of iMsg
+There are 2 functions added to make translations easier:
+
+- `iMsg` function: Returns the translation of the key, parameters (in option) and LanguageDetection (in option)
+- `eMsg` function: Do an echo of `iMsg`
 
 ###Interface
 
-The interface EditTranslationInterface can be implement to use the Mouf interface on the translator. Many new method must be implement to recover, save and edit a translation.
+The interface `EditTranslationInterface` can be implemented to use the Mouf interface on the translator. Many new methods must be implemented to recover, save and edit a translation.
 
 ###Trait
 
