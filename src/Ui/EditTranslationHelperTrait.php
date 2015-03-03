@@ -21,11 +21,24 @@ trait EditTranslationHelperTrait
      * @param array<string, string> $messages List with key value of translation
      * @param string                $language Language to add translation
      */
-    public function setTranslations(array $messages, $language)
+    public function setTranslationsForLanguage(array $messages, $language)
     {
         foreach ($messages as $key => $value) {
             $this->setTranslation($key, $value, $language);
         }
+    }
+
+    /**
+     * Add or change many translations in one time
+     *
+     * @param array<string, string> $messages List with key value of translation
+     * @param string                $language Language to add translation
+     */
+    public function setTranslationsForKey(array $messages, $key)
+    {
+    	foreach ($messages as $language => $value) {
+    		$this->setTranslation($key, $value, $language);
+    	}
     }
 
     /**

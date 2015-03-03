@@ -85,20 +85,6 @@ trait EditTranslationProxyTrait {
 	 * @return boolean
 	 * @throws Exception
 	 */
-	protected function addTranslationLanguageFromService($selfEdit, $msgInstanceName, $language) {
-		$finePhpArrayTranslationService = new InstanceProxy($msgInstanceName, $selfEdit);
-		$finePhpArrayTranslationService->createLanguageFile($language);
-	}
-
-	/**
-	 * Adds a new translation language using CURL.
-	 *
-	 * @param bool $selfEdit
-	 * @param string $msgInstanceName
-	 * @param string $language
-	 * @return boolean
-	 * @throws Exception
-	 */
 	protected function deleteTranslationFromService($selfEdit, $msgInstanceName, $key, $language = null) {
 		$finePhpArrayTranslationService = new InstanceProxy($msgInstanceName, $selfEdit);
 		$finePhpArrayTranslationService->deleteTranslation($key, $language);

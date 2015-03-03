@@ -60,7 +60,7 @@ interface EditTranslationInterface
 
     /**
      * Add or change many translations in one time, for a language
-     * The table is the key that you want change
+     * The table index is the key that you want change
      *
      * @param array<string, string> $messages List with key value of translation
      * @param string                $language Language to add translation
@@ -69,7 +69,7 @@ interface EditTranslationInterface
 
     /**
      * Add or change many translations in one time, for a key
-     * The table is the language that you want change
+     * The table index is the language that you want change
      *
      * @param array<string, string> $messages List with key language of translation
      * @param string                $key Key to add translation
