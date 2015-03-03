@@ -3,7 +3,7 @@ What is this package
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thecodingmachine/utils.i18n.fine.common/badges/quality-score.png?b=4.0)](https://scrutinizer-ci.com/g/thecodingmachine/utils.i18n.fine.common/?branch=4.0)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a208129a-0776-4c11-b7cf-fecb6f957def/small.png)](https://insight.sensiolabs.com/projects/a208129a-0776-4c11-b7cf-fecb6f957def)
 
-This package contains all the functions, classes and installer to easily use fine in Muof.
+This package contains all the functions, classes and installer to easily use fine in Mouf.
 
 A list of packages using those interfaces:
 
