@@ -32,7 +32,7 @@ trait EditTranslationHelperTrait
      * Add or change many translations in one time
      *
      * @param array<string, string> $messages List with key value of translation
-     * @param string                $language Language to add translation
+     * @param string                $key Key to add translation
      */
     public function setTranslationsForKey(array $messages, $key)
     {
@@ -68,7 +68,7 @@ trait EditTranslationHelperTrait
         $keys = array();
         // First, let's merge all the arrays in order to get all the keys:
         foreach ($this->getAllTranslationByLanguage() as $translations) {
-            $keys = array_merge($key, $translations);
+            $keys = array_merge($keys, $translations);
         }
 
         return array_keys($keys);
