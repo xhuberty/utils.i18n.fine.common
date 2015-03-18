@@ -43,9 +43,8 @@ class FineCascadingTranslator implements TranslatorInterface
      */
     public function getTranslation($message, array $parameters = array(), LanguageDetectionInterface $languageDetection = null)
     {
-        echo 'oui aaa';
         foreach ($this->translators as $translator) {
-            $tranlation = $translator->getTranslation($message, $parameters);
+            $tranlation = $translator->getTranslation($message, $parameters, $languageDetection);
             if ($tranlation !== null) {
                 return $tranlation;
             }
