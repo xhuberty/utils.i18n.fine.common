@@ -8,6 +8,7 @@ namespace Mouf\Utils\I18n\Fine\Common\Ui;
 
 /**
  * Used to translation message
+ * This class add default implementation to create your own storage translator
  *
  * @author Marc Teyssier
  *
@@ -32,13 +33,13 @@ trait EditTranslationHelperTrait
      * Add or change many translations in one time
      *
      * @param array<string, string> $messages List with key value of translation
-     * @param string                $key Key to add translation
+     * @param string                $key      Key to add translation
      */
     public function setTranslationsForKey(array $messages, $key)
     {
-    	foreach ($messages as $language => $value) {
-    		$this->setTranslation($key, $value, $language);
-    	}
+        foreach ($messages as $language => $value) {
+            $this->setTranslation($key, $value, $language);
+        }
     }
 
     /**

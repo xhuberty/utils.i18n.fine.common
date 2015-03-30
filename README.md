@@ -3,17 +3,19 @@ What is this package
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/thecodingmachine/utils.i18n.fine.common/badges/quality-score.png?b=4.0)](https://scrutinizer-ci.com/g/thecodingmachine/utils.i18n.fine.common/?branch=4.0)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a208129a-0776-4c11-b7cf-fecb6f957def/small.png)](https://insight.sensiolabs.com/projects/a208129a-0776-4c11-b7cf-fecb6f957def)
 
-This package contains all the functions, classes and installer to easily use fine in Mouf.
+If you are not familiar with Fine, you should stop reading **right now**! Please [get started with the main presentation](http://mouf-php.com/packages/mouf/utils.i18n.fine.translation-interface/README.md).
 
-A list of packages using those interfaces:
+Language detection is a PHP internationalisation package, it depends of translation-interface package.
+This package contains many class to return the selected language for internationalisation.
 
-- [Fine](http://mouf-php.com/packages/mouf/utils.i18n.fine.file-translator/README.md): Fine Is Not English, the default translation package for the Mouf framework.
-
-Mouf package
-------------
-
-This package is part of Mouf (http://mouf-php.com), an effort to ensure good developing practices by providing a graphical dependency injection framework.
-
+It's could be with :
+- Browser detection,
+- fix language,
+- data set in session,
+- a link between domain name and language
+- a cascading of many solutions.
+    
+The language can be used to translate message in fine or whatever.
 
 Dependencies
 ------------
@@ -55,7 +57,7 @@ This package contains
 
 ###Installer
 
-The installer creates a default instance and automatically binds the translator.
+[The installer creates a default instance and automatically binds the translator.](doc/install.md)
 
 ###Default class
 
@@ -69,9 +71,12 @@ There are 2 functions added to make translations easier:
 - `iMsg` function: Returns the translation of the key, parameters (in option) and LanguageDetection (in option)
 - `eMsg` function: Do an echo of `iMsg`
 
+[Read the documentation to use it](doc/using.md)
+
 ###Interface
 
 The interface `EditTranslationInterface` can be implemented to use the Mouf interface on the translator. Many new methods must be implemented to recover, save and edit a translation.
+[Read the documentation](doc/implement.md)
 
 ###Trait
 

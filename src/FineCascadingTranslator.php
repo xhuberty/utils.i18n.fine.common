@@ -24,7 +24,7 @@ class FineCascadingTranslator implements TranslatorInterface
     private $translators = array();
 
     /**
-     * 
+     *
      * @param array<\Mouf\Utils\I18n\Fine\TranslatorInterface> $translators
      */
     public function __construct(array $translators = array())
@@ -38,7 +38,7 @@ class FineCascadingTranslator implements TranslatorInterface
      *
      * @param $message string This is the key of translation search
      * @param $parameters array All parameters to customize message
-     * @param LanguageDetectionInterface $languageDetection Set it if you want to force the language to another value
+     * @param  LanguageDetectionInterface $languageDetection Set it if you want to force the language to another value
      * @return string|null
      */
     public function getTranslation($message, array $parameters = array(), LanguageDetectionInterface $languageDetection = null)

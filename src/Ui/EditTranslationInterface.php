@@ -7,7 +7,8 @@
 namespace Mouf\Utils\I18n\Fine\Common\Ui;
 
 /**
- * Used to translation message
+ * Used to interface of translation message
+ * This interface must be implement to use the human interface in Mouf
  *
  * @author Marc Teyssier
  *
@@ -15,16 +16,15 @@ namespace Mouf\Utils\I18n\Fine\Common\Ui;
 interface EditTranslationInterface
 {
 
+    /**
+     * Return the list of all translation. The table has 2 dimensions.
+     * The first is the language.
+     * The second is the key/value of translation
+     *
+     * @return array<string, array<string, string>> Translations
+     */
+    public function getAllTranslationByLanguage();
 
-	/**
-	 * Return the list of all translation. The table has 2 dimensions.
-	 * The first is the language.
-	 * The second is the key/value of translation
-	 *
-	 * @return array<string, array<string, string>> Translations
-	 */
-	public function getAllTranslationByLanguage();
-	
     /**
      * Return a list of all message for a language.
      *
@@ -40,7 +40,7 @@ interface EditTranslationInterface
      * @return array<string, string> List with key value of translation
      */
     public function getTranslationsForKey($key);
-    
+
     /**
      * Delete a translation for a language. If the language is not set or null, this function deletes the translation for all language.
      *
@@ -72,7 +72,7 @@ interface EditTranslationInterface
      * The table index is the language that you want change
      *
      * @param array<string, string> $messages List with key language of translation
-     * @param string                $key Key to add translation
+     * @param string                $key      Key to add translation
      */
     public function setTranslationsForKey(array $messages, $key);
 

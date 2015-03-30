@@ -6,7 +6,7 @@ use Mouf\MoufManager;
 use Mouf\Actions\InstallUtils;
 
 /**
- * A logger class that writes messages into the php error_log.
+ * Installer for common fine package. This create a defaultTranslationService
  */
 class FineInstaller implements PackageInstallerInterface
 {
